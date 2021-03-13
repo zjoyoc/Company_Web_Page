@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Portfolio Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Titillium+Web:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="index.html">Home</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="about.html">About</a>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="brand">
+          OUR EXPERTISE
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio1.jpg)"></div>
+
+          <div class="img-text-wrapper">
+            <div class="subtitle">Manufacturing</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio2.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Government</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio3.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Retail</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio4.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Finance</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio5.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Agriculture</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio6.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Healthcare</div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
+</html>
